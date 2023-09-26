@@ -1,0 +1,110 @@
+/* Reset dei margini e dei padding per tutti gli elementi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stili per l'header */
+header {
+    background-color: #3826c2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* Stili per la barra di navigazione */
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+
+/* Stili per il contenuto principale */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.article-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.article-subp {
+    font-size: 14px;
+    color: #888;
+}
+
+.article-author {
+    font-weight: bold;
+}
+
+.article-data {
+    font-style: italic;
+}
+
+/* Aggiungi ulteriori stili per gli altri elementi della pagina qui */
+
+/* Stili per il footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Stili per i div con classi specifiche */
+#correlati {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Stili per il div con id "newsletter" */
+#newsletter {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center; 
+}
+
+.newsletter-text {
+    font-size: 16px;
+}
+
+/* Stili per il div con classe "article-video" */
+.article-video {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
