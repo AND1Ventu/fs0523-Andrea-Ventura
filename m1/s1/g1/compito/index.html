@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Ventura</title>
+
+    <style>
+        body {
+            background-image: url('./assets/images/bg.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Stile per il container dell'header */
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Sfondo con trasparenza */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra */
+        }
+
+        /* Stile per il footer */
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0; /* You can adjust this if needed */
+            width: 100%; /* Make the footer span the entire width */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 0; /* Remove any margin to ensure it's at the very bottom */
+        }
+
+        /* Stile per l'header */
+        header {
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Add a new class for the transformed header */
+        .transformed-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Sfondo con trasparenza */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra */
+        }
+
+        .transformed-header h1 {
+            font-size: 16px;
+        }
+
+        .transformed-header img {
+            max-width: 60px; /* Reduce the image size */
+        }
+
+        /* Stile per l'icona dell'hamburger menu */
+        .hamburger-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        /* Stile per la navbar laterale */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Nascondi la navbar a sinistra */
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.3s; /* Transizione per animazione di apertura */
+            padding-top: 60px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 15px;
+            transition: 0.2s; /* Transizione per animazione al passaggio del mouse */
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Classe per mostrare la navbar */
+        .show-navbar {
+            left: 0;
+        }
+
+        /* Stile per l'icona "X" per chiudere la navbar */
+        .close-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Icona dell'hamburger menu -->
+    <div class="hamburger-icon" onclick="toggleNavbar()">
+        &#9776;
+    </div>
+
+    <!-- Navbar laterale -->
+    <div class="navbar" id="navbar">
+        <span class="close-icon" onclick="toggleNavbar()">&#10006;</span>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#presentation" onclick="showSection('presentation')">Presentation</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#experiences" onclick="showSection('experiences')">Experiences</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            <!-- Aggiungi ulteriori link per altre sezioni se necessario -->
+        </ul>
+    </div>
+
+    <!-- Header centrato verticalmente e orizzontalmente -->
+    <header id="home" class="header-container">
+        <a href="https://a20ura.it"><img src="assets/images/fototessera.jpg" height="100px" alt="link a a20ura.it"></a>
+        <h1>Andrea Ventura</h1>
+        <a href="mailto:a.ventura239@icloud.com"><h4>a.ventura239@icloud.com</h4></a>
+        <a href="tel:+393517937301"><h4>3517937301</h4></a>
+    </header>
+
+    <!-- Resto del contenuto -->
+    <main id="presentation" class="hidden">
+        <figure>
+            <a href="assets/images/download.gif">
+                <img src="assets/images/fototessera.jpg" width="20%" alt="Fototessera di Andrea Ventura">
+            </a>
+            <figcaption>Andrea Ventura nel 2020: Versione Fototessera. </figcaption>
+        </figure>
+        
+        <p>Benvenuti, sono Andrea Ventura. <br>Sono dell'anno 1993, quindi ad oggi ho 30 anni.</p>
+        <p>I miei hobbies sono calcio, fotografia, drone</p>
+        <p>Mi sono diplomato al liceo scientifico <a href="#">BUS "Blaise Pascal"</a> nell'anno 2012, successivamente ho conseguito le certificazioni in "Networking" e "Analisi Dati" presso l'ente di formazione IFOA.<br>
+        Ora, dopo una trimestrale esperienza come Analista Programmatore Python, frequento il corso Full Stack Developer di <a href="https://www.epicode.com">EPICODE</a>.</p>
+        
+
+        <section id="about" class="hidden">
+            <div>
+                <h2>Le mie competenze</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>Python</li>
+                    <li>MySQL</li>
+                </ul>
+                <h2>Le mie competenze</h2>
+                <ol>
+                    <li>Java</li>
+                    <li>Javascript</li>
+                    <li>Angular</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="experiences" class="hidden">
+            <h2>Esperienze Scolastiche/Accademiche e Lavorative</h2>
+            <table>
+                <tr>
+                    <th>Anno</th>
+                    <th>Titolo</th>
+                    <th>Istituto/Organizzazione</th>
+                </tr>
+                <tr>
+                    <td>2007 - 2012</td>
+                    <td>Diploma Liceo Scientifico</td>
+                    <td>ITGS BUS "Blaise Pascal"</td>
+                </tr>
+                <tr>
+                    <td>2018</td>
+                    <td>Attestato di Networking: tecnico di rete</td>
+                    <td>IFOA</td>
+                </tr>
+                <tr>
+                    <td>2018 - 2020</td>
+                    <td>Tecnico di rete</td>
+                    <td>GAB Tamagnini</td>
+                </tr>
+                <tr>
+                    <td>2020 - 2021</td>
+                    <td>Tecnico di rete</td>
+                    <td>INTREND - Diffusione Tessile</td>
+                </tr>
+                <tr>
+                    <td>2021 - 2022</td>
+                    <td>Attestato di Analisi e Visualizzazione Dati: tecnico di database</td>
+                    <td>IFOA</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>Analista programmatore Python</td>
+                    <td>Energee3</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="contact" class="hidden">
+            <h2>Contatti</h2>
+            <p>Email: <a href="mailto:a.ventura239@icloud.com">a.ventura239@icloud.com</a></p>
+            <p>Numero di Telefono: <a href="tel:+393517937301">+39 3517937301</a></p>
+            <p>Socials:
+                <a href="https://www.linkedin.com/in/a20ura/">LinkedIn</a>
+                <a href="https://github.com/AND1Ventu">GitHub</a>
+            </p>
+        </section >
+    </main>
+
+    <footer id="footer">
+        <p>Copyright&copy; 2023 Andrea Ventura</p>
+    </footer>
+
+    <script>
+        // Funzione per mostrare/nascondere la navbar
+        function toggleNavbar() {
+            var navbar = document.getElementById('navbar');
+            navbar.classList.toggle('show-navbar');
+
+            // Ripristina la visualizzazione dell'header quando si chiude la navbar
+            var header = document.querySelector('.header-container');
+            header.style.display = 'block';
+        }
+
+        // Funzione per mostrare la sezione specificata e nascondere le altre
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('main, section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+            });
+
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.remove('hidden');
+
+            // Ripristina la visualizzazione dell'header quando si seleziona una sezione
+            var header = document.querySelector('.header-container');
+            header.style.display = 'block';
+
+            // Chiudi la navbar quando si seleziona una sezione
+            var navbar = document.getElementById('navbar');
+            navbar.classList.remove('show-navbar');
+        }
+
+
+    </script>
+</body>
+</html>
