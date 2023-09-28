@@ -1,0 +1,169 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: url("../img/sfondo.png");
+}
+
+/* HEADER */
+.top-header, footer{
+    background-color: cadetblue;
+    margin: 20px 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    text-align: center;
+}
+.top-header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+}
+.top-header nav a::before {
+    content: " \⇒	 ";
+}
+.top-header nav a::after {
+    content: " \⇐ ";
+}
+.top-header nav a, .top-header nav h1{
+    color: white;
+    font-weight: bold;
+}
+
+/* MAIN */
+.container{
+    margin: 20px 20px auto;
+    padding: 40px 15px;
+    background-color: white;
+    box-shadow: 5px;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+article{
+
+}
+.article-title {
+    line-height: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.article-text, .article-ulist, .article-ulist p, .article-olist, .article-table{
+    margin-bottom: 10px;
+}
+.article-subp{
+    color: grey;
+    margin-bottom: 15px;
+}
+.article-text span{
+    color: grey;
+
+}
+.article-ulist ul{
+    list-style: disc;
+    line-height: 1.5em;
+    margin-left: 20px;
+}
+.article-ulist code{
+    background-color: lightgrey;
+    border: 1px solid grey;
+    border-radius: 10%;
+
+}
+.article-ulist span{
+    color: grey;
+}
+.article-olist ol{
+    list-style: decimal;
+    margin-left: 20px;
+    line-height: 1.5em;
+
+}
+
+/* TABELLE */
+.article-subtitle{
+    text-align: center;
+    font-weight: bold;
+}
+.article-table {
+    width: 100%;
+    border-bottom: 2px solid blue;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+.article-table thead th{
+    background-color: blue;
+    color: white;
+    border: 0 1px solid white;
+}
+th, td {
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 10px; 
+}
+tr:nth-child(odd) {
+    background-color: #fff; 
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+/* VIDEO */
+iframe {
+    border-radius: 20px;
+}
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+#newsletter{
+    background-color: lightgrey;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#newsletter h3, #correlati h4{
+    font-weight: bold;
+    margin: 15px;
+    font-size: larger;
+}
+#newsletter form{
+    font-weight: bold;
+    margin: 15px;
+    font-size: larger;
+}
+#newsletter .email {
+    border: none;
+    border-bottom: 2px dashed;
+}
+#newsletter .button {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px; 
+    border: none; 
+    cursor: pointer;
+}
+#correlati article{
+    background-color: lightgrey;
+    margin: 20px 0;
+    padding: 15px;
+}
+#correlati article .category{
+    color: black;
+}
+#correlati article .data{
+    text-align: right;
+}
+
+/* FOOTER */
