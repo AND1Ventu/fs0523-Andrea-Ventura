@@ -1,0 +1,151 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: #393d41;
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    color: #25a2c3;
+}
+
+/* HEADER */
+.top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-header img, .top-header h1, .top-header p, .top-header .header-button {
+    padding: 20px;
+}
+.top-header header {
+    text-align: center;
+    width: 100%;
+
+}
+.top-header .logo{
+    text-align: left;
+    background-color: black;
+}
+.top-header .banner{
+    background-image: url("../images/banner.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 150px; 
+}
+.top-header .banner h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: larger;
+    font-weight: bold;
+    color: #25a2c3;
+}
+.top-header p{
+    padding-bottom: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+.top-header .header-button{
+    padding: 20px 40px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+}
+
+/* CONTAINER */
+.container{
+    text-align: center;
+}
+.why{
+    width: 80%;
+    margin: 0 auto;
+    padding: 150px;
+    display: flex;
+}
+.why .right-column{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 50px;
+}
+.container .why .section-title{
+    padding-top: 30px;
+    text-align: left;
+}
+.container .why img{
+    border-radius: 100%;
+    height: 300px;
+    padding-top: 20px;
+}
+
+
+
+/* TESTIMONIAL */
+.container .testimonial{
+    background-color: #e22d0e;
+    padding: 30px;
+    color: white;
+    padding: 30px;
+}
+.container .testimonial .section-title{
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    padding-bottom: 30px;
+}
+.container .testimonial .section-subp{
+    color: white;
+    font-style: italic;
+    padding-bottom: 30px;
+}
+.container .testimonial .signature{
+    color: white;
+    font-style: normal;
+}
+.container .testimonial .signature{
+    color: white;
+    
+}
+.container .testimonial .signaturep{
+    color: white;
+    font-size: smaller;
+}
+
+/* ARTICLE CARD */
+.card-container{
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+}
+.card{
+    border: 2px solid #dee1e3;
+    margin: 25px;
+}
+.card .article-text{
+        padding: 20px;
+}
+.article-img {
+    width: 100%;
+}
+
+/* FOOTER */
+footer{
+    background-color: #25a2c3;
+    color: #c8e7f0;
+    text-align: center;
+    padding: 40px;
+}
+footer .footer-title h3{
+    color: #c8e7f0;
+    font-size: xx-large;
+}
+footer a, footer address{
+    color: #c8e7f0;
+}
+footer .separator{
+    width: 30%;
+}
