@@ -95,7 +95,7 @@ const starWarsCharacters = [
     mass: 77,
     hair_color: "auburn, white",
     skin_color: "fair",
-    eye_color: "blue-gray",
+    eye_color: "bluegray",
     birth_year: "57BBY",
     gender: "male"
   }
@@ -113,19 +113,20 @@ let characters = [];
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  characters.push(starWarsCharacters.name)
+  characters.push(starWarsCharacters[i].name)
 }
-
+console.log(characters);
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
 let femaleCharacters = [];
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters.gender === 'female') {
-    femaleCharacters.push(starWarsCharacters)
+  if (starWarsCharacters[i].gender === 'female') {
+    femaleCharacters.push(starWarsCharacters[i])
   }
 }
+console.log(femaleCharacters);
 
 
 /* ESERCIZIO 4
@@ -137,7 +138,7 @@ let eyeColor = {
   yellow: [],
   brown: [],
   red: [],
-  blue-gray: []
+  bluegray: []
 }
 
 /* ESERCIZIO 5
@@ -146,21 +147,21 @@ let eyeColor = {
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  switch (starWarsCharacters.eye_color) {
+  switch (starWarsCharacters[i].eye_color) {
     case 'blue':
-      eyeColor.blue.push(starWarsCharacters)
+      eyeColor.blue.push(starWarsCharacters[i])
       break;
     case 'yellow':
-      eyeColor.yellow.push(starWarsCharacters)
+      eyeColor.yellow.push(starWarsCharacters[i])
       break;
     case 'brown':
-      eyeColor.brown.push(starWarsCharacters)
+      eyeColor.brown.push(starWarsCharacters[i])
       break;
     case 'red':
-      eyeColor.red.push(starWarsCharacters)
+      eyeColor.red.push(starWarsCharacters[i])
       break;
-    case 'blue-gray':
-      eyeColor.blue-gray.push(starWarsCharacters)
+    case 'bluegray':
+      eyeColor.bluegray.push(starWarsCharacters[i])
       break;
 
     default:
@@ -258,20 +259,4 @@ console.log('characters after the operation: ' + characters.length);
   e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 randomIndex = getRandomInt(0, (starWarsCharacters.length - 1) )
-console.log('Ciao, sono ' +  starWarsCharacters.name + '! \n Sono alto ' + starWarsCharacters.height + 'cm e peso ' + starWarsCharacters.mass 'kg');
-
-
-
-
-
-
-{
-  name: "C-3PO",
-  height: 167,
-  mass: 75,
-  hair_color: "n/a",
-  skin_color: "gold",
-  eye_color: "yellow",
-  birth_year: "112BBY",
-  gender: "n/a"
-},
+console.log('Ciao, sono ' +  starWarsCharacters.name + '! \n Sono alto ' + starWarsCharacters.height + 'cm e peso ' + starWarsCharacters.mass  + 'kg');
