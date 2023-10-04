@@ -212,7 +212,7 @@ if (crewMass) {
   }
 }
 */
-let result;
+let result = 0;
 
 if (crewMass) {
   if (crewMass > 1000) {
