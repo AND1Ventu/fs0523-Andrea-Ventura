@@ -172,15 +172,16 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
-let crewMass;
+let crewMass = 0;
 let i = 0;
 while ( i < starWarsCharacters.length) {
   for (let index = 0; index < starWarsCharacters.length; index++) {
-    crewMass += starWarsCharacters.mass
+    crewMass += starWarsCharacters[i].mass
   
   }
   i++;
 }
+console.log(crewMass);
 
 /* ESERCIZIO 7
   Crea uno if/else statement per rivelare la tipologia di carico, utilizzando la massa totale, 
@@ -235,28 +236,32 @@ if (crewMass) {
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters.gender === 'n/a') {
-    starWarsCharacters.gender = 'robot'
+  if (starWarsCharacters[i].gender === 'n/a') {
+    starWarsCharacters[i].gender = 'robot'
   }
 }
-
+console.log(starWarsCharacters)
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "characters" le stringhe corrispondenti 
   a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "characters" prima e dopo l'operazione.
-*/
-console.log('characters before the operation: ' + characters.length);
-
-for (let i = 0; i < femaleCharacters.length; i++) {
-  let toDel = characters.findIndex(femaleCharacters.name)
-  characters.splice(toDel, 1)
-}
-
-console.log('characters after the operation: ' + characters.length);
-
+  console.log('characters before the operation: ' + characters.length);
+  
+  for (let i = 0; i < femaleCharacters.length; i++) {
+    let toDel = characters.findIndex(femaleCharacters[i].name)
+    characters.splice(toDel, 1)
+  }
+  
+  console.log('characters after the operation: ' + characters.length);
+  */
+  
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" 
   e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
-randomIndex = getRandomInt(0, (starWarsCharacters.length - 1) )
-console.log('Ciao, sono ' +  starWarsCharacters.name + '! \n Sono alto ' + starWarsCharacters.height + 'cm e peso ' + starWarsCharacters.mass  + 'kg');
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+randomIndex = getRandomInt(0, (0, starWarsCharacters.length - 1) )
+console.log('Ciao, sono ' +  starWarsCharacters[randomIndex].name + '! \n Sono alto ' + starWarsCharacters[randomIndex].height + 'cm e peso ' + starWarsCharacters[randomIndex].mass  + 'kg');
