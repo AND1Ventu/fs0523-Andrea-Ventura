@@ -138,7 +138,7 @@ console.log(upperString);
 */
 
 function cutString(string) {
-    let cutted = string.slice(1).split().reverse().join("").slice(1).reverse().join("")
+    let cutted = string.slice(1, string.lenght-1)
     return cutted 
 }
 
