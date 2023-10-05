@@ -46,9 +46,7 @@ function crazyDiff(numero) {
 */
 
 function boundary(n) {
-    if ((20 <= n <= 100) || (n === 400)) {
-        return true;
-    } 
+    return ((20 <= n <= 100) || (n === 400))
 }
 
 /* ESERCIZIO 5
