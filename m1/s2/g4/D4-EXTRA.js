@@ -98,55 +98,123 @@ do {
 */
 
 function maxShoppingCart(shoppingCart) {
-    let arrayPrice = [];
+    let priceMax = 0;
+    let objMax = {};
     for (let element of shoppingCart) {
-        if 
-        
-        (element.price >= arrayPrice.price){
-            arrayPrice.push(element)
+        if (element.price >= priceMax){
+            priceMax = element.price;
+            Object.defineProperties(objMax, element)
         }
     }
-    return arrayPrice;
 }
 
 /* EXTRA 5
- Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
+ Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". 
+ Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "latestShoppingCart" che riceve l'array "shoppingCart" e ritorna l'ultimo elemento.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function latestShoppingCart(shoppingCart) {
+    return shoppingCart[shoppingCart.lenght - 1]
+}
 
 /* EXTRA 6
  Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
- La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
+ La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9
+ finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function loopUntil(x) {
+    do {
+        let i = 0;
+        random = giveMeRandom()
+        console.log(random)
+        if (random > x){
+            i += 1
+        }
+    } while (i < 3);
+}
+
+function giveMeRandom(n=1) {
+    var randomNumbers = [];
+    for (let i = 0; i < n; i++) {
+        let randomNumber = Math.floor(Math.random() * 11);
+        randomNumbers.push(randomNumber)
+    }
+    return randomNumbers
+}
+
+
+let x;
+do {
+    x = prompt('Inserire il valore x: ')
+} while (!(9 >= x >= 0 ));
+
+loopUntil(x);
 
 /* EXTRA 7
-Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
+Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica.
+ La funzione salta automaticamente i valori non numerici nell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function average(array) {
+    let sumNum = 0;
+    let numerosita = 0;
+    for (let element of array) {
+        if (typeof(element) === 'number') {
+            sumNum += element;
+            numerosita += 1
+        }
+    }
+    return average = sumNum / numerosita
+}
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function longest(array) {
+    let long;
+    for (let element of array) {
+        if (element >= long) {
+            long.push(element)
+        }
+    }
+    return long;
+}
+
 
 /* EXTRA 9
- Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
+ Crea una funzione per creare un filtro anti-spam per la tua casella email. 
+ La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function antiSpam(emailContent) {
+    let matchesSpam = str.matchAll('SPAM')
+    let matchesScam = str.matchAll('SCAM')
+    if ((!(matchesScam)) && (!(matchesSpam))) {
+        return true
+    }
+}
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function howManyDays(data) {
+    let millisecData = Date.parse(data)
+    let now = new Date()
+    let millisecNow = Date.parse(now)
+    let max = Math.max(millisecData, millisecNow)
+    let min = Math.min(millisecData, millisecNow)
+    let diff = max - min;
+    let days = diff / ( 1000 * 60 * 60 *24)
+    return days
+}
+
+let data = new Date('2020-02-20');
+let days = howManyDays(data)
 
 /* EXTRA 11
  Scrivi una funzione chiamata "matrixGenerator" che riceve come parametri due numeri interi, "x" e "y".
@@ -156,4 +224,20 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function matrixGenerator(x,y) {
+    let matrix = [] 
+    for (let i = 0; i < x.length; i++) {
+        for (let j = 0; j < y.length; j++) {
+            matrix.push(str(x)+str(y))
+        }
+    }
+}
+
+do {
+    let x = prompt('inserisci x intero: ')
+} while (x < 1);
+do {
+    let y = prompt('inserisci y intero: ')
+} while (y < 1);
+
+matrixGenerator(x,y)

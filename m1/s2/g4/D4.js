@@ -12,12 +12,19 @@ function area(l1, l2) {
 */
 
 function crazySum(int1, int2) {
-    if (int1 === int2) {
-        return ( int1 + int2 ) * 3
-    } else {
-        return (int1 + int2)
+    let sum = int1 + int2
+    if (sum) {
+        return ( sum ) * 3
     }
+    return (sum)
 }
+
+
+function crezySUm(int1, int2) {
+    let sum = int1 + int2;
+    return int1 === int2 ? sum*3 : sum;
+}
+
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
