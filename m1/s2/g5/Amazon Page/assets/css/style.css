@@ -1,0 +1,160 @@
+/* body */
+body {
+    background-color: #E9EDEE;
+    font: Arial, Helvetica, sans-serif;
+}
+
+/* logo */
+.logo{
+    background-color: #22303F;
+
+}
+.logo img {
+    height: 80px;;
+}
+
+/* NAVBAR */
+.navbar, .footer-link{
+    background-color: #364759;
+}
+.navbar ul, .footer-link {
+    list-style: none;
+    padding: 10px;
+}
+
+.navbar li {
+display: inline;
+margin-left: 20px;
+
+}
+
+.navbar a{
+text-decoration: none; 
+padding: 5px;
+color: #E3F2FB;
+}
+/* PROMO */
+.promo {
+    text-align: center; 
+    background-color: red; 
+    padding: 15px; 
+    margin: 15px 10px;
+}
+
+.promo h3 {
+    color: white;
+    margin: 0;
+}
+
+
+/* ASIDE */
+aside {
+    text-align: center; 
+  }
+aside h2{
+    font-size: larger;
+    font-weight: bold;
+    padding: 20px;
+}
+.aside-image {
+    background-image: url(../images/bg-image.png);
+    margin: 10px;
+    height: 150px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+}
+
+/* PERFECT GIFT */
+.perfect-gift {
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .perfect-gift .text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .perfect-gift a {
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  
+  .perfect-gift .images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .perfect-gift img {
+    width: 20%;
+    height: 250px;
+    margin: 15px;
+    border-radius: 5%;
+  }
+
+/* SECTION-IMAGE */
+.section-image {
+    margin: 40px;
+    padding: 20px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-image figcaption {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-image p {
+    margin: 0;
+    padding-right: 5px;
+}
+
+.section-image a {
+    text-decoration: none;
+}
+
+  
+  
+/* FOOTER */  
+.footer-link{
+    text-align: center;
+}
+.footer-link a{
+    color: #E3F2FB;
+}
+.footer-logo{
+    background-color: #22303F;
+}
+.footer-logo img {
+    max-width: 100px;
+    display: block; 
+    padding: 50px;
+    margin: 0 auto; 
+}
