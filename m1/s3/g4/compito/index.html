@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tombola</title>
+</head>
+<body>
+    <h1>Tombola</h1>
+    <div id="options">
+        <label for="numCards">Numero di cartelle da giocare:</label>
+        <select id="numCards">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <button id="startGame">Inizia la partita</button>
+    </div>
+    <div id="game">
+        <h3>Tabellone</h3>
+        <div id="mainBoard">
+            <!-- Qui verrà generato il tabellone principale -->
+        </div>
+        <div id="playerBoards">
+            <!-- Qui verranno generate le cartelle dei giocatori -->
+        </div>
+    </div>
+    <button id="drawNumber">Estrai un numero</button>
+    <div id="drawnNumbers">
+        <h3>Numeri estratti</h3>
+        <ul></ul>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
