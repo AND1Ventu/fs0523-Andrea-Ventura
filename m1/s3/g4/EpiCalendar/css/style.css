@@ -1,0 +1,34 @@
+/* Aggiungi queste regole CSS per evidenziare il giorno corrente */
+.day.current-day {
+    background-color: #3498db;
+    color: white;
+}
+
+#weekdays {
+    display: flex;
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#weekdays div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+#days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.current-day {
+    background-color: #3498db;
+    color: white;
+}

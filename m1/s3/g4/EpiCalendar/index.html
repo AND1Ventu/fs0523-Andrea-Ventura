@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <h1>Calendario del Mese Corrente</h1>
+    <div id="calendar">
+        <div id="header">
+            <button id="prev-month">&lt;</button>
+            <h2 id="current-month"></h2>
+            <button id="next-month">&gt;</button>
+        </div>
+        <div id="weekdays">
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mer</div>
+            <div>Gio</div>
+            <div>Ven</div>
+            <div>Sab</div>
+            <div>Dom</div>
+        </div>
+        <div id="days"></div>
+    </div>
+    
+    <div id="event-form">
+        <h2>Nuovo Appuntamento</h2>
+        <input type="date" id="event-date" placeholder="Data">
+        <input type="text" id="event-title" placeholder="Titolo">
+        <button onclick="addEvent()">Aggiungi</button>
+    </div>
+    <ul id="event-list">
+        <!-- Qui verranno visualizzati gli appuntamenti salvati -->
+    </ul>
+    <script src="./js/script.js"></script>
+</body>
+</html>
