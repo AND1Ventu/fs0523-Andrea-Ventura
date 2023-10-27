@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazione Ciclica di Parole</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .animation-container {
+            margin-top: 100px;
+        }
+
+        .changing-word {
+            font-size: 24px;
+            position: relative;
+            animation: wordChange 3s linear infinite;
+        }
+
+        @keyframes wordChange {
+            0%, 100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            10%, 90% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animation-container">
+        <p>Realizziamo con cura, passione, attenzione, meticolosità, precisione ed un pizzico di originalità: <span class="changing-word"></span></p>
+    </div>
+    
+    <script>
+        const changingWord = document.querySelector('.changing-word');
+        const words = ["Single page app", "Interfacce web", "App native"];
+        let currentWordIndex = 0;
+
+        function changeWord() {
+            changingWord.textContent = words[currentWordIndex];
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+        }
+
+        setInterval(changeWord, 3000);
+    </script>
+</body>
+</html>

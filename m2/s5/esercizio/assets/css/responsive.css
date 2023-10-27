@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+    .trend-article {
+      flex-basis: calc(50% - 10px); 
+    }
+  }

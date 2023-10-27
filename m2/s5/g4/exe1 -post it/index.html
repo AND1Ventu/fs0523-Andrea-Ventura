@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavagna con Post-it</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            margin: 20px;
+        }
+
+        .post-it {
+            background-color: #ffcc00;
+            padding: 10px;
+            border: 2px solid #cc9900;
+            box-shadow: 3px 3px 5px #888;
+            transform: rotate(-2deg);
+            transition: transform 0.3s;
+        }
+
+        .post-it:hover {
+            transform: scale(1.05) rotate(-2deg);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="addPostIt">Aggiungi Post-it</button>
+            <button id="removePostIt">Rimuovi Post-it</button>
+            <button id="resetBoard">Resetta la Lavagna</button>
+        </nav>
+    </header>
+    <div class="board">
+        <!-- Post-it vengono aggiunti dinamicamente qui -->
+    </div>
+
+    <script>
+        const board = document.querySelector(".board");
+        const addPostItButton = document.getElementById("addPostIt");
+        const removePostItButton = document.getElementById("removePostIt");
+        const resetBoardButton = document.getElementById("resetBoard");
+
+        addPostItButton.addEventListener("click", () => {
+            const postIt = document.createElement("div");
+            postIt.classList.add("post-it");
+            postIt.setAttribute("contenteditable", "true");
+            board.appendChild(postIt);
+        });
+
+        removePostItButton.addEventListener("click", () => {
+            const postIts = board.querySelectorAll(".post-it");
+            if (postIts.length > 0) {
+                board.removeChild(postIts[postIts.length - 1]);
+            }
+        });
+
+        resetBoardButton.addEventListener("click", () => {
+            board.innerHTML = "";
+        });
+    </script>
+</body>
+</html>

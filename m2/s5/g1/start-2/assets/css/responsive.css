@@ -1,0 +1,94 @@
+@media screen and (min-width: 576px) {
+
+    article table {
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+    article table {
+        margin: 0 auto;
+    }
+
+    .desktop-display section form input {
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    article table {
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .desktop-display {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .desktop-display section {
+        border-radius: 20px;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    aside div {
+        background-color: transparent;
+        border: none;
+    }
+
+    aside .correlati {
+        display: flex;
+        flex-direction: row;
+        
+        
+        
+    }
+
+    aside .correlati div {
+        width: calc(100% / 3);
+        background-color: #e3e3e3;
+        border: 1px solid #c3c3c3;
+    }
+
+}
+
+@media print {
+
+    * {
+        font-size: 2.3rem;
+    }
+
+    header, .desktop-display, aside, footer {
+        display: none;
+    }
+
+
+}
