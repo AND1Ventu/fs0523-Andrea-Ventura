@@ -1,0 +1,50 @@
+//INCLUDES
+
+
+//
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  
+    &:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  #hero{
+    background-color: aqua;
+  }
+
+  .fade-in-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-down.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#grid{
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    width: calc(25% - 5px);
+}

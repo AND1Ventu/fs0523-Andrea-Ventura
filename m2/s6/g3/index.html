@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+    <div class="container col-12">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Simple header</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Servizi</a></li>
+        </ul>
+        </header>
+    </div>
+
+<!-- HERO -->
+    <div class="container col-xxl-8 px-4 py-5" id="hero">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-12 col-sm-8 col-lg-6">
+                <img src="https://www.freecodecamp.org/news/content/images/2022/04/sass-image.png" class="d-block mx-lg-auto img-fluid fade-in-down" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3 fade-in-down">Responsive left-aligned hero with image</h1>
+                <p class="lead fade-in-down">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start fade-in-down">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Accedi</button>
+                    <button type button" class="btn btn-outline-secondary btn-lg px-4">Scopri di Più</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contattaci</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- GRID with images -->
+
+<div class="container" id="grid">
+    <div class="card">
+        <img src="https://www.freecodecamp.org/news/content/images/2022/04/sass-image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.freecodecamp.org/news/content/images/2022/04/sass-image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.freecodecamp.org/news/content/images/2022/04/sass-image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.freecodecamp.org/news/content/images/2022/04/sass-image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".fade-in-down").addClass("active");
+        });
+    </script>
+    
+</body>
+</html>
