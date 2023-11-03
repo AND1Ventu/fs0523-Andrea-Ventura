@@ -1,0 +1,28 @@
+$sizes: (
+    sm: 12px,
+    normal: 16px,
+    md: 24px,
+    lg: 36px,
+    xl: 48px,
+    xxl: 160px
+);
+
+@mixin generateSpacing($direction, $property, $pLetter) {
+
+    @each $chiave, $valore in $sizes{
+        .#{$pLetter}-#{$direction}-#{$chiave}{
+            #{$property}-#{$direction}: $valore;
+        }
+    }
+
+}
+
+@include generateSpacing(top, margin , m);
+@include generateSpacing(left, margin , m);
+@include generateSpacing(bottom, margin , m);
+@include generateSpacing(right, margin , m);
+
+@include generateSpacing(top, padding , p);
+@include generateSpacing(left, padding , p);
+@include generateSpacing(bottom, padding , p);
+@include generateSpacing(right, padding , p);

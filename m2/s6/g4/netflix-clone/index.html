@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="all-view">
+
+<!-- HEADER with NAVBAR and ICONS-->
+        <header>
+
+<!-- NAVBAR -->
+            <div class="nav-left">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/netflix_logo.png" alt="netflix logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
+                            <li class="nav-item active"> <a class="nav-link" href="#">TV Shows</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Movies</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">Recently Added</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#">My List</a> </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+<!-- ICONS-->
+            <div class="nav-right">
+                <div class="flex-shrink-0 dropdown">
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="#" class="nav-link text-secondary" data-bs-toggle="modal" data-bs-target="#searchModal">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                              </svg>
+                            </a>
+                          </li>
+                          <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <input type="text" class="form-control" placeholder="Search...">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Search</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                        <li>
+                          <a href="#" class="nav-link">
+                            KIDS
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                              </svg>
+                          </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./assets/avatar.png" alt="mdo" width="32" height="32" class="">
+                            </a>
+                            <ul class="dropdown-menu text-small shadow">
+                                <li><a class="dropdown-item" href="./settings.html">Settings</a></li>
+                                <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                    
+                  </div>
+            </div>
+
+
+
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 pt-3">
+                        <h1>TV Shows</h1>
+                    </div>
+                    <div class="col-1 pt-3">
+                        <select id="genre" name="genre" class="custom-select">
+                            <option value="genre">Genres</option>
+                            <option value="action">Azione</option>
+                            <option value="comedy">Commedia</option>
+                            <option value="drama">Drammatico</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="horror">Horror</option>
+                            <option value="romance">Romantico</option>
+                            <option value="scifi">Fantascienza</option>
+                            <option value="thriller">Thriller</option>
+                        </select>
+
+                    </div>
+                    <div class="col-1 offset-8 pt-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list-columns-reverse" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z"/>
+                        </svg>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-view-list" viewBox="0 0 16 16">
+                            <path d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                        </svg>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="./assets/media/media0.webp" class="d-block w-100" alt="Image 1">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media1.jpg" class="d-block w-100" alt="Image 2">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media2.webp" class="d-block w-100" alt="Image 3">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media3.webp" class="d-block w-100" alt="Image 4">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media4.jpg" class="d-block w-100" alt="Image 5">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media5.webp" class="d-block w-100" alt="Image 6">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="./assets/media/media6.jpg" class="d-block w-100" alt="Image 7">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media7.webp" class="d-block w-100" alt="Image 8">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media8.webp" class="d-block w-100" alt="Image 9">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media9.jpg" class="d-block w-100" alt="Image 10">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media10.jpg" class="d-block w-100" alt="Image 11">
+                                </div>
+                                <div class="col-2">
+                                    <img src="./assets/media/media11.jpg" class="d-block w-100" alt="Image 12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+
+</html>

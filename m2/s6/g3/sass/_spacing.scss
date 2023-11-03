@@ -1,0 +1,18 @@
+$valori : 12, 16, 24;
+
+
+
+@each $misura in $valori{
+    .margine-top-#{$misura}{
+        margin-top: $misura + px;
+    }
+    .margine-bottom-#{$misura}{
+        margin-bottom: $misura + px;
+    }
+    .margine-right-#{$misura}{
+        margin-right: $misura + px;
+    }
+    .margine-left-#{$misura}{
+        margin-left: $misura + px;
+    }
+}

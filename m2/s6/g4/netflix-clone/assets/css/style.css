@@ -1,0 +1,65 @@
+.all-view{
+    padding: 15px 0;
+    background-color: black;
+}
+
+header, .container.title {
+    background-color: #141414;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.navbar-brand img{
+    width: 150px;
+    height: 50px;
+}
+
+
+.nav-item a{
+    color: #b3b3b3;
+}
+
+.nav-link svg {
+    fill: #b3b3b3; 
+  }
+  
+.nav-link{
+    color: #b3b3b3
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main h1{
+    color: #b3b3b3;
+}
+
+.custom-select {
+    display: inline-block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 5px 10px;
+    line-height: 1.5;
+    color: #b3b3b3;
+    vertical-align: middle;
+    background-color: #000000;
+    border: 1px solid #ced4da;
+}
+
+main .container svg{
+    fill:#b3b3b3;
+    border: 1px solid #b3b3b3;
+    font-size: 5rem;
+}
+
+main .container .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
