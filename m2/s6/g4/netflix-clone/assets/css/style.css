@@ -1,6 +1,7 @@
 .all-view{
     padding: 15px 0;
     background-color: black;
+    height: calc(100vh - 30px);
 }
 
 header, .container.title {
@@ -34,9 +35,15 @@ header, .container.title {
     flex-direction: row;
     align-items: center;
 }
-
-main h1{
+main{
+    background-color: #141414;
+}
+main h1, main h2{
     color: #b3b3b3;
+}
+
+main .container{
+    padding: 21px;
 }
 
 .custom-select {
@@ -62,4 +69,68 @@ main .container .row{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.col-2 {
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    border-bottom: 15px solid black;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.6rem;
+}
+
+footer .container.footer{
+    width: 60%;
+    margin: 0 auto;
+}
+
+footer .social-links svg{
+    fill: #b3b3b3; 
+    margin: 10px 10px;
+}
+
+footer .useful-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .useful-links .col-auto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+footer .useful-links .col-auto a{
+    color: #b3b3b3;
+    text-decoration: none;
+
+}
+footer .service-code{
+    padding: 25px 0px;
+}
+footer .service-code a{
+    color: #b3b3b3;
+    text-decoration: none;
+    border: 1px solid #b3b3b3;
+    padding: 10px;
+
+}
+
+footer .service-code a:hover{
+    color: #141414;
+    background-color: #b3b3b3;
+    border: 1px solid #b3b3b3;
+}
+
+footer .copyright{
+    color: #b3b3b3;
 }
