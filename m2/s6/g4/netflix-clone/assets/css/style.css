@@ -134,3 +134,150 @@ footer .service-code a:hover{
 footer .copyright{
     color: #b3b3b3;
 }
+
+.prof-container{
+    width: 100%;
+    margin: 0px auto;
+    background-color: #141414;
+    border: solid 1px black;
+    position: absolute;
+}
+
+.prof-container .logo img{
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+
+.settings-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.settings-container .edit-prof .title{
+    font-size: 60px;
+    color: white;
+    
+}
+
+.settings-container .edit-prof{
+    width: 100%;
+    border-bottom: solid 2px #b3b3b3;
+}
+
+.settings-container .settings{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.settings .image img{
+    width: 150px;
+    height: 150px;
+    align-self: flex-end;
+}
+
+.settings-container .right-settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-container .right-settings .language,
+.settings-container .right-settings .maturity-set,
+.settings-container .right-settings .autoplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #b3b3b3;
+}
+
+.settings-container .right-settings .language input{
+    width: 100%;
+    background-color: #666666;
+    padding: 10px 100px;
+}
+
+.settings-container .right-settings .language input::placeholder{
+     color: white;
+     font-size: 24px;
+     margin-left: 20px;
+}
+
+
+.settings-container .right-settings .language label{
+    color: #666666;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.settings-container .right-settings .language select{
+    
+    background-color: black;
+    padding: 10px 50px;
+    color: white;
+    font-size: 24px;
+    margin: 20px;
+}
+
+.settings-container .right-settings .maturity-set h3, 
+.settings-container .right-settings .autoplay h3{
+    color: #666666;
+    font-size: 24px;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.settings-container .right-settings .maturity-set .allmat{
+    color: white;
+    background-color: #333333;
+    padding: 10px 20px;
+}
+
+.settings-container .right-settings .maturity-set .allmat:hover{
+    background-color: #141414;
+}
+
+.settings-container .right-settings .maturity-set .mat-ratings{
+    color: white;
+
+}
+
+.settings-container .right-settings .maturity-set .btn,
+.settings-container .prof-buttons .btn{
+    color: #b3b3b3;
+    border: 2px solid #b3b3b3;
+    border-radius: 0%;
+    margin: 20px 5px;
+}
+
+.settings-container .right-settings .maturity-set .btn:hover,
+.settings-container .prof-buttons .btn:hover{
+    color: #141414;
+    background-color: #FFFFFF;
+    border: 2px solid #b3b3b3;
+}
+
+.settings-container .right-settings .autoplay label {
+    color: white;
+} 
+
+.autoplay input[type="checkbox"]:checked {
+        background-color: black; 
+    }
+
+.autoplay {
+    margin-bottom: 20px;
+}
