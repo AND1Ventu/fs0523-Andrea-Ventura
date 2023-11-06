@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestione degli animali domestici</title>
+</head>
+<body>
+    <h1>Gestione degli animali domestici</h1>
+    
+    <form id="petForm">
+        <label for="petName">Nome dell'animale:</label>
+        <input type="text" id="petName" required><br><br>
+        
+        <label for="ownerName">Nome del proprietario:</label>
+        <input type="text" id="ownerName" required><br><br>
+        
+        <label for="species">Specie:</label>
+        <input type="text" id="species" required><br><br>
+        
+        <label for="breed">Razza:</label>
+        <input type="text" id="breed" required><br><br>
+        
+        <button type="button" id="addPetButton">Aggiungi Animale</button>
+    </form>
+    
+    <h2>Elenco degli animali domestici:</h2>
+    <ul id="petList">
+    </ul>
+    
+    <script>
+        class Pet {
+            constructor(petName, ownerName, species, breed) {
+                this.petName = petName;
+                this.ownerName = ownerName;
+                this.species = species;
+                this.breed = breed;
+            }
+
+            hasSameOwner(otherPet) {
+                return this.ownerName === otherPet.ownerName;
+            }
+        }
+
+        const pets = [];
+
+        function addPet() {
+            const petName = document.getElementById("petName").value;
+            const ownerName = document.getElementById("ownerName").value;
+            const species = document.getElementById("species").value;
+            const breed = document.getElementById("breed").value;
+
+            const pet = new Pet(petName, ownerName, species, breed);
+            pets.push(pet);
+
+            document.getElementById("petList").innerHTML = '';
+            for (const p of pets) {
+                document.getElementById("petList").innerHTML += `<li>${p.petName} (${p.species}, ${p.breed}) - Proprietario: ${p.ownerName}</li>`;
+            }
+
+            // Reset the form
+            document.getElementById("petForm").reset();
+        }
+
+        document.getElementById("addPetButton").addEventListener("click", addPet);
+    </script>
+</body>
+</html>
