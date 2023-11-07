@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrazione Utente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registrazione Utente</h2>
+    <div>
+      <label for="name">Nome:</label>
+      <input type="text" id="name" placeholder="Inserisci il tuo nome">
+    </div>
+    <div>
+      <p id="timeElapsed">Tempo trascorso: 0 secondi</p>
+    </div>
+    <div>
+      <p>Nome salvato: <span id="savedName"></span></p>
+    </div>
+    <button id="saveButton">Salva Nome</button>
+    <button id="clearButton">Cancella Nome Salvato</button>
+  </div>
+
+  <script>
+    // Definizione della classe Registrazione
+    class Registrazione {
+      constructor() {
+        this.nameInput = document.getElementById('name');
+        this.savedNameElement = document.getElementById('savedName');
+        this.saveButton = document.getElementById('saveButton');
+        this.clearButton = document.getElementById('clearButton');
+        this.timeElapsedElement = document.getElementById('timeElapsed');
+
+        this.saveButton.addEventListener('click', this.saveName.bind(this));
+        this.clearButton.addEventListener('click', this.clearName.bind(this));
+
+        // Inizializza il contatore
+        this.initializeCounter();
+      }
+
+      // Metodo per salvare il nome in localStorage
+      saveName() {
+        const name = this.nameInput.value;
+        if (name) {
+          localStorage.setItem('user_name', name);
+          this.savedNameElement.textContent = name;
+        }
+      }
+
+      // Metodo per cancellare il nome salvato
+      clearName() {
+        localStorage.removeItem('user_name');
+        this.nameInput.value = '';
+        this.savedNameElement.textContent = '';
+      }
+
+      // Inizializza il contatore e aggiorna ogni secondo
+      initializeCounter() {
+        let counter = parseInt(sessionStorage.getItem('counter')) || 0;
+        this.updateCounter(counter);
+
+        setInterval(() => {
+          counter++;
+          this.updateCounter(counter);
+          sessionStorage.setItem('counter', counter);
+        }, 1000);
+      }
+
+      // Metodo per aggiornare il valore del contatore nella pagina
+      updateCounter(counter) {
+        this.timeElapsedElement.textContent = `Tempo trascorso: ${counter} secondi`;
+      }
+    }
+
+    // Istanzia un oggetto Registrazione per gestire il modulo
+    const registrazione = new Registrazione();
+  </script>
+</body>
+</html>

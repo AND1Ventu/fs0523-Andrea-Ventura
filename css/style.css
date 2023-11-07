@@ -1,0 +1,337 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.margine-top-12 {
+  margin-top: 12px;
+}
+
+.margine-bottom-12 {
+  margin-bottom: 12px;
+}
+
+.margine-right-12 {
+  margin-right: 12px;
+}
+
+.margine-left-12 {
+  margin-left: 12px;
+}
+
+.margine-top-16 {
+  margin-top: 16px;
+}
+
+.margine-bottom-16 {
+  margin-bottom: 16px;
+}
+
+.margine-right-16 {
+  margin-right: 16px;
+}
+
+.margine-left-16 {
+  margin-left: 16px;
+}
+
+.margine-top-24 {
+  margin-top: 24px;
+}
+
+.margine-bottom-24 {
+  margin-bottom: 24px;
+}
+
+.margine-right-24 {
+  margin-right: 24px;
+}
+
+.margine-left-24 {
+  margin-left: 24px;
+}
+
+.m-top-sm {
+  margin-top: 12px;
+}
+
+.m-top-normal {
+  margin-top: 16px;
+}
+
+.m-top-md {
+  margin-top: 24px;
+}
+
+.m-top-lg {
+  margin-top: 36px;
+}
+
+.m-top-xl {
+  margin-top: 48px;
+}
+
+.m-top-xxl {
+  margin-top: 160px;
+}
+
+.m-left-sm {
+  margin-left: 12px;
+}
+
+.m-left-normal {
+  margin-left: 16px;
+}
+
+.m-left-md {
+  margin-left: 24px;
+}
+
+.m-left-lg {
+  margin-left: 36px;
+}
+
+.m-left-xl {
+  margin-left: 48px;
+}
+
+.m-left-xxl {
+  margin-left: 160px;
+}
+
+.m-bottom-sm {
+  margin-bottom: 12px;
+}
+
+.m-bottom-normal {
+  margin-bottom: 16px;
+}
+
+.m-bottom-md {
+  margin-bottom: 24px;
+}
+
+.m-bottom-lg {
+  margin-bottom: 36px;
+}
+
+.m-bottom-xl {
+  margin-bottom: 48px;
+}
+
+.m-bottom-xxl {
+  margin-bottom: 160px;
+}
+
+.m-right-sm {
+  margin-right: 12px;
+}
+
+.m-right-normal {
+  margin-right: 16px;
+}
+
+.m-right-md {
+  margin-right: 24px;
+}
+
+.m-right-lg {
+  margin-right: 36px;
+}
+
+.m-right-xl {
+  margin-right: 48px;
+}
+
+.m-right-xxl {
+  margin-right: 160px;
+}
+
+.p-top-sm {
+  padding-top: 12px;
+}
+
+.p-top-normal {
+  padding-top: 16px;
+}
+
+.p-top-md {
+  padding-top: 24px;
+}
+
+.p-top-lg {
+  padding-top: 36px;
+}
+
+.p-top-xl {
+  padding-top: 48px;
+}
+
+.p-top-xxl {
+  padding-top: 160px;
+}
+
+.p-left-sm {
+  padding-left: 12px;
+}
+
+.p-left-normal {
+  padding-left: 16px;
+}
+
+.p-left-md {
+  padding-left: 24px;
+}
+
+.p-left-lg {
+  padding-left: 36px;
+}
+
+.p-left-xl {
+  padding-left: 48px;
+}
+
+.p-left-xxl {
+  padding-left: 160px;
+}
+
+.p-bottom-sm {
+  padding-bottom: 12px;
+}
+
+.p-bottom-normal {
+  padding-bottom: 16px;
+}
+
+.p-bottom-md {
+  padding-bottom: 24px;
+}
+
+.p-bottom-lg {
+  padding-bottom: 36px;
+}
+
+.p-bottom-xl {
+  padding-bottom: 48px;
+}
+
+.p-bottom-xxl {
+  padding-bottom: 160px;
+}
+
+.p-right-sm {
+  padding-right: 12px;
+}
+
+.p-right-normal {
+  padding-right: 16px;
+}
+
+.p-right-md {
+  padding-right: 24px;
+}
+
+.p-right-lg {
+  padding-right: 36px;
+}
+
+.p-right-xl {
+  padding-right: 48px;
+}
+
+.p-right-xxl {
+  padding-right: 160px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+.btn:focus {
+  outline: none;
+}
+
+#hero {
+  background-color: aqua;
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  width: calc(25% - 5px);
+}/*# sourceMappingURL=style.css.map */
