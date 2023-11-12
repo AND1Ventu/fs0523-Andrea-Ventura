@@ -45,56 +45,77 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script>
 
-        let url = new URLSearchParams(location.search);
+        document.addEventListener("DOMContentLoaded", function () {
 
-        let id = url.get("id");
-        fetch('https://striveschool-api.herokuapp.com/api/product/' + id)
-        .then(res => res.json())
-        .then(prodotto => {
+            // Recupera l'id dai queryparm
+            let url = new URLSearchParams(location.search);
+            let id = url.get("id");
 
-            let prodotto = document.querySelector('#nome').value;
-            let description = document.querySelector('#description').value;
-            let brand = document.querySelector('#brand').value;
-            let price = Number(document.querySelector('#price').value);
-            let imageUrl = "https://picsum.photos/200"
-        })
+            // Aggiungi l'evento submit al form
+            let form = document.querySelector('form');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
 
+                // Verifica se tutti i campi sono stati compilati
+                if (validateForm()) {
+                    // Se tutti i campi sono compilati, procedi con la richiesta PUT
+                    let name = document.querySelector('#nome').value;
+                    let description = document.querySelector('#description').value;
+                    let brand = document.querySelector('#brand').value;
+                    let price = Number(document.querySelector('#price').value);
 
-        let saveBtn = document.querySelector('.save');
-        
-        saveBtn.addEventListener("click", function(e){
-            e.preventDefault();
+                    let newProduct = {
+                        name,
+                        description,
+                        brand,
+                        price,
+                        imageUrl: "https://picsum.photos/200"
+                    };
 
+                    fetch("https://striveschool-api.herokuapp.com/api/product/" + id, {
+                        method: "PUT",
+                        headers: {
+                            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZTU0MTI1NGU4ODAwMTgzZjE4NmIiLCJpYXQiOjE2OTk2MDM3NzgsImV4cCI6MTcwMDgxMzM3OH0.elvQhPg3lOOjwjwzlfrc61qz8ir66WHEu7IwS0TWiy4",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(newProduct)
+                    })
+                    .then(res => res.json())
+                    .then(prodotti => {
+                        location.href = '/lista.html';
+                    })
+                    .catch(error => console.error("Errore durante la modifica del prodotto:", error));
+                }
+            });
+        });
+
+        // Funzione per validare il form
+        function validateForm() {
             let nome = document.querySelector('#nome').value;
             let description = document.querySelector('#description').value;
             let brand = document.querySelector('#brand').value;
-            let price = Number(document.querySelector('#price').value);
+            let price = document.querySelector('#price').value;
 
-            let newProduct = {
-                nome,
-                description,
-                brand,
-                price,
-                imageUrl
+            // Verifica se tutti i campi sono stati compilati
+            if (!nome || !description || !brand || !price) {
+                // Se almeno un campo non è compilato, evidenzia i campi con il bordo rosso
+                document.querySelectorAll('.form-control').forEach(input => {
+                    input.style.border = "1px solid red";
+                });
+
+                // Mostra un messaggio di errore (puoi personalizzare il messaggio secondo le tue esigenze)
+                alert("Inserisci tutti i dati del form");
+
+                return false;
             }
 
-            fetch("https://striveschool-api.herokuapp.com/api/product/" + prodotto._id, {
-                method: "PUT",
-                headers: {
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkZTU0MTI1NGU4ODAwMTgzZjE4NmIiLCJpYXQiOjE2OTk2MDM3NzgsImV4cCI6MTcwMDgxMzM3OH0.elvQhPg3lOOjwjwzlfrc61qz8ir66WHEu7IwS0TWiy4",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(newProduct)
-            })
-            .then(res => res.json())
-            .then(prodotti => {
-                location.href = '/lista.html'
-            })
-        });
+            // Se tutti i campi sono compilati, rimuovi eventuali bordi rossi
+            document.querySelectorAll('.form-control').forEach(input => {
+                input.style.border = "1px solid #ced4da"; // Ripristina il colore del bordo originale
+            });
 
-
-
+            return true;
+        }
     </script>
 </body>
 </html>
-
