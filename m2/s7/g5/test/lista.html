@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    
+    <h1 class="text-center">Catalogo</h1>
+    <table class="table mx-auto" style="width: 80%; margin: auto;">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Brand</th>
+                <th>Prezzo</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="lista">
+
+        </tbody>
+    </table>
+
+    <template>
+        <tr>
+            <td class="id"></td>
+            <td class="image"><img class="image"></td>
+            <td class="name"></td>
+            <td class="desc"></td>
+            <td class="brand"></td>
+            <td class="price"></td>
+            <td class="azioni">
+                <a class="modifica btn btn-warning" href="modifica.html">Modifica</a>
+                <button class="elimina btn btn-danger">Elimina</button>
+                <a class="scopri-di-piu btn btn-info scopri-di-piu" href="./details.html">Scopri di più</a>
+            </td>
+        </tr>
+    </template>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

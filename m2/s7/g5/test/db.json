@@ -1,0 +1,19 @@
+{
+    "products":
+    [
+        {
+            "name": "",
+            "description": "",
+            "brand": "",
+            "imageUrl": "",
+            "price": 0
+        },
+        {
+            "name": "Andrea",
+            "description": "persona",
+            "brand": "human",
+            "imageUrl": "https://picsum.photos/200",
+            "price": 99
+          }
+    ]
+}
