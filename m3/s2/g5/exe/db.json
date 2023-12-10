@@ -1,0 +1,22 @@
+{
+  "pizze": [
+    {
+      "active": true,
+      "gusto": "Diavola",
+      "prezzo": 1.5,
+      "id": 1
+    },
+    {
+      "active": true,
+      "gusto": "Maxime sunt ad culpa",
+      "prezzo": 75,
+      "id": 2
+    },
+    {
+      "active": false,
+      "gusto": "Sunt consequuntur nu",
+      "prezzo": 17,
+      "id": 3
+    }
+  ]
+}

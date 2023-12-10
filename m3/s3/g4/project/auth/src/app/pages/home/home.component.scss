@@ -1,0 +1,92 @@
+.container {
+  background-size: cover;
+  background-position: center;
+
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+
+  .forecast-item {
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+}
+
+.weather-panel {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.date-and-weather {
+  flex-grow: 1;
+}
+
+.temperature {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.current-temp span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.temp-range small {
+
+  display: block;
+  margin-top: 5px;
+  color: #777;
+}
+
+.weather-description {
+
+  font-size: 1rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.main {
+  margin-top: 50px;
+}
+.weather-panel2 {
+  background-image: url("https://unsplash.it/600/400?image=1043&blur");
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 25px 25px 40px 0px rgba(0,0,0,0.33);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+
+  small {
+    color: inherit;
+    font-size: 50%;
+  }
+  ul.forecast > li {
+    border-top: 1px solid #fff;
+  }
+  .temperature {
+    & > span {
+        font-size: 2em;
+    }
+  }
+}
+
+

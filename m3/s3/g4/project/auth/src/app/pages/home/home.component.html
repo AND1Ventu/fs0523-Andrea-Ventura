@@ -1,0 +1,84 @@
+<div class="container" [ngStyle]="currentWallpaper ? {'background-image': 'url(' + currentWallpaper + ')'} : {}">
+  <!-- Search Bar -->
+  <div [ngClass]="cityData ? 'row mt-2 justify-content-center' : 'row align-items-center justify-content-center'">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Enter the city name">
+        <div class="input-group-append">
+          <button class="btn btn-primary" (click)="performSearch()">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- City and Weather Information Panels (Conditional) -->
+  <div *ngIf="cityData" class="row mt-4 justify-content-center">
+    <!-- City Display Panel -->
+    <div class="col-md-6">
+      <div *ngIf="cityData.name" class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ cityData.name }}</h5>
+          <!-- Button to add or remove city from favorites -->
+          <button class="btn btn-secondary" (click)="toggleFavorite(cityData.name)">
+            {{ isFavorite(cityData.name) ? 'Remove from Favorites' : 'Add to Favorites' }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main container mx-auto">
+      <div class="row justify-content-center">
+        <div class="col-xs-12 justify-content-center">
+          <div *ngIf="weatherData" class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4 weather-panel2">
+            <div class="col-xs-6">
+              <!-- Display the city name and current date -->
+              <h2 class="text-center">{{ cityData?.name }}<br><small>{{ formatDate(weatherData[0].dt_txt) }}</small>
+              </h2>
+              <!-- Display the current weather description -->
+              <p class="h3 text-center">
+                {{ getTranslatedWeatherDescription(weatherData[0].weather[0].description) }}
+              </p>
+            </div>
+            <div class="col-xs-6 text-center">
+              <!-- Display the current temperature -->
+              <div class="h1 temperature">
+                <span>{{ (weatherData[0].main.temp - 273.15) | number:'1.0-2' }}°C</span>
+                <br>
+                <!-- Display the temperature range -->
+                <small>{{ (weatherData[0].main.temp_min - 273.15) | number:'1.0-2' }}°C / {{
+                  (weatherData[0].main.temp_max - 273.15) | number:'1.0-2' }}°C</small>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <!-- Display the forecast for the next days with horizontal scrolling -->
+              <div class="forecast-container" style="overflow-x: auto;">
+                <ul class="list-inline row forecast justify-content-center">
+                  <li class="col-xs-4 col-sm-2 text-center" *ngFor="let forecast of weatherData | slice:1:7">
+                    <h3 class="h5">{{ formatDate(forecast.dt_txt, 'EEE') }}</h3>
+                    <p>
+                      {{ (forecast.main.temp_min - 273.15) | number:'1.0-2' }}°C / {{ (forecast.main.temp_max - 273.15)
+                      |
+                      number:'1.0-2' }}°C
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Favorites Section -->
+    <div *ngIf="favorites && favorites.length > 0" class="row mt-4 justify-content-center">
+      <div class="col">
+        <h4 class="text-center">Favorites</h4>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let favorite of favorites">{{ favorite }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

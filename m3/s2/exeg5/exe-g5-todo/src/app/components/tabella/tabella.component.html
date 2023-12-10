@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of todosArr">
+      <td>{{t.id}}</td>
+      <td>{{t.title}}</td>
+      <td>{{t.completed}}</td>
+      <td><button class="btn btn-warning">Modifica</button></td>
+      <td><button class="btn btn-danger">Elimina</button></td>
+    </tr>
+  </tbody>
+</table>

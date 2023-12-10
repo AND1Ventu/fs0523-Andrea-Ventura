@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div>
+    <h5>Login</h5>
+    <form>
+      <input type="email" [(ngModel)]="loginData.email" name="email" class="form-control mb-2" placeholder="Email">
+      <input type="password" [(ngModel)]="loginData.password" name="password" class="form-control mb-2" placeholder="Password">
+      <div class="d-flex justify-content-center">
+        <button (click)="save()" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

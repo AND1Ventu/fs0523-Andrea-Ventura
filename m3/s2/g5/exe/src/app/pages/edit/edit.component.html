@@ -1,0 +1,12 @@
+<div *ngIf="!todo" class="alert alert-info">
+  Caricamento in corso
+</div>
+<form *ngIf="todo">
+  <input type="text" required placeholder="Title" [(ngModel)]="todo.title" name="title" class="form-control">
+  <input type="number" placeholder="ID" [(ngModel)]="todo.id" name="ID" class="form-control">
+  <select name="active" [(ngModel)]="todo.completed" class="form-control">
+    <option value="1">Completed</option>
+    <option value="0">Not completed</option>
+  </select>
+  <button (click)="save()" class="btn btn-success">Salva</button>
+</form>

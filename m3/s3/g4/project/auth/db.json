@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "email": "mario@rossi.it",
+      "password": "$2a$10$J7eKkQ6mlr4nKWdH4kfhTeIgeCAacxiw3xp0VGJeiFTA9jaUE1ZvW",
+      "nome": "mario",
+      "id": 1
+    },
+    {
+      "email": "a.ventura239@icloud.com",
+      "password": "$2a$10$kkQEY0UfrHjyaIfQr9Z.jOLFe331POeUB/k74dz4gjvHTPM5rgPhi",
+      "nome": "Andrea",
+      "id": 2
+    }
+  ],
+  "favorites": [
+    {
+      "name": "Rome",
+      "id": 1
+    },
+    {
+      "name": "Bologna",
+      "id": 2
+    },
+    {
+      "name": "Bologna",
+      "id": 3
+    }
+  ]
+}

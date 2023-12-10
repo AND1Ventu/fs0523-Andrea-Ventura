@@ -1,0 +1,31 @@
+<div class="container">
+
+  <form [formGroup]="form">
+
+    <input type="text" class="form-control" formControlName="nome" placeholder="Il tuo nome">
+    <div *ngIf="!isValid('nome') && isTouched('nome')" class="alert alert-warning">Devi inserire il nome</div>
+
+    <input type="text" class="form-control" formControlName="cognome" placeholder="Il tuo cognome">
+    <div *ngIf="!isValid('cognome') && isTouched('cognome')" class="alert alert-warning">Devi inserire il cognome</div>
+
+    <input type="password" class="form-control" formControlName="password" placeholder="La tua password">
+
+    <input type="password" class="form-control" formControlName="confermaPwd" placeholder="Conferma la tua password">
+
+    <select formControlName="genere" class="form-select">
+      <option value="">Seleziona un'opzione</option>
+      <option value="1">Uomo</option>
+      <option value="2">Donna</option>
+    </select>
+
+    <input type="text" class="form-control" formControlName="imgProfile" placeholder="La tua immagine profilo">
+
+    <input type="text" class="form-control" formControlName="bio" placeholder="La tua Bio">
+
+    <input type="text" class="form-control" formControlName="username" placeholder="Il tuo username">
+
+    <button (click)="send()" class="btn btn-primary">Invia</button>
+    <div class="alert alert-warning">Devi compilare tutti i campi</div>
+
+  </form>
+</div>
