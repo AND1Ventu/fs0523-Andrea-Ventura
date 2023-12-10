@@ -1,92 +1,99 @@
 .container {
   background-size: cover;
   background-position: center;
+  padding: 20px;
+  color: #333;
 
-}
+  // Adjusting the search bar
+  .input-group {
+    max-width: 500px;
+    margin: auto;
 
-.horizontal-scroll {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 10px 0;
+    .form-control {
+      border-radius: 0.25rem;
+      border: 1px solid #ddd;
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        outline: none;
+      }
+    }
 
-  .forecast-item {
-    flex: 0 0 auto;
-    width: 200px;
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-
-    p {
-      margin: 5px 0;
+    .btn-primary {
+      border-radius: 0.25rem;
+      background-color: #007bff;
+      border-color: #007bff;
+      &:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
     }
   }
-}
 
-.weather-panel {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  align-items: center;
-}
+  // Styling for city information panel
+  .card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-.date-and-weather {
-  flex-grow: 1;
-}
+    .card-body {
+      padding: 1rem;
 
-.temperature {
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.current-temp span {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.temp-range small {
-
-  display: block;
-  margin-top: 5px;
-  color: #777;
-}
-
-.weather-description {
-
-  font-size: 1rem;
-  color: #555;
-  margin-top: 5px;
-}
-
-.main {
-  margin-top: 50px;
-}
-.weather-panel2 {
-  background-image: url("https://unsplash.it/600/400?image=1043&blur");
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 25px 25px 40px 0px rgba(0,0,0,0.33);
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-
-  small {
-    color: inherit;
-    font-size: 50%;
+      .btn-secondary {
+        border-radius: 0.25rem;
+        &:hover {
+          background-color: darken(#6c757d, 10%);
+        }
+      }
+    }
   }
-  ul.forecast > li {
-    border-top: 1px solid #fff;
-  }
-  .temperature {
-    & > span {
+
+  // Styling for the main weather panel
+  .weather-panel2 {
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 25px 25px 40px 0px rgba(0, 0, 0, 0.33);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem 0;
+
+    .temperature {
+      & > span {
         font-size: 2em;
+      }
+      small {
+        color: inherit;
+        font-size: 50%;
+      }
+    }
+  }
+
+  // Styling for forecast section
+  .forecast-container {
+    @extend .horizontal-scroll !optional;
+    padding: 1rem 0;
+
+    .forecast-item {
+      @extend .forecast-item;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  // Favorites section styling
+  .favorites {
+    margin-top: 1rem;
+
+    h4 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .list-group-item {
+      background-color: #f8f8f8;
+      &:hover {
+        background-color: #f1f1f1;
+      }
     }
   }
 }
-
-
